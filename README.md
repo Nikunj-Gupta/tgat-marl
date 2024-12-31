@@ -157,6 +157,11 @@ bash install_gfootball.sh
 **Run an experiment**
 
 ```shell
+# For Pogema 
+python3 src/main.py --config=qmix --env-config=pogema with env_args.size=10 env_args.density=0 seed=0 
+```
+
+```shell
 # For SMAC
 python3 src/main.py --config=qmix --env-config=sc2 with env_args.map_name=corridor
 ```
