@@ -162,6 +162,11 @@ python3 src/main.py --config=qmix --env-config=pogema with env_args.size=10 env_
 ```
 
 ```shell
+# For SMACv2
+python3 src/main.py --config=qmix --env-config=sc2_gen_protoss with env_args.capability_config.n_units=5 env_args.capability_config.n_enemies=5 seed=0 
+```
+
+```shell
 # For SMAC
 python3 src/main.py --config=qmix --env-config=sc2 with env_args.map_name=corridor
 ```
