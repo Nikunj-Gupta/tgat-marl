@@ -4,7 +4,7 @@ import os
 
 from .multiagentenv import MultiAgentEnv
 
-from .starcraft import StarCraft2Env
+from smacv2.env import MultiAgentEnv, StarCraftCapabilityEnvWrapper
 from .matrix_game import OneStepMatrixGame
 from .stag_hunt import StagHunt
 from .pogema import PyMarlPogema
@@ -20,7 +20,7 @@ def env_fn(env, **kwargs) -> MultiAgentEnv:
     return env(**kwargs)
 
 REGISTRY = {}
-REGISTRY["sc2"] = partial(env_fn, env=StarCraft2Env)
+REGISTRY["sc2wrapped"] = partial(env_fn, env=StarCraftCapabilityEnvWrapper)
 REGISTRY["stag_hunt"] = partial(env_fn, env=StagHunt)
 REGISTRY["one_step_matrix_game"] = partial(env_fn, env=OneStepMatrixGame)
 REGISTRY["pogema"] = partial(env_fn, env=PyMarlPogema) 

@@ -8,7 +8,6 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvi
 
 pip install protobuf==3.20.* sacred numpy scipy gym==0.11 matplotlib seaborn \
     pyyaml pygame pytest probscale imageio snakeviz tensorboard-logger pymongo setproctitle 
-pip install git+https://github.com/oxwhirl/smac.git@26f4c4e4d1ebeaf42ecc2d0af32fac0774ccc678
 pip install git+https://github.com/oxwhirl/smacv2.git 
 
 pip install torch_geometric
