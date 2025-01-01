@@ -54,7 +54,7 @@ bash install_gfootball.sh
 
 ```shell
 # For Pogema 
-python3 src/main.py --config=qmix --env-config=pogema with env_args.size=10 env_args.density=0 seed=0 
+python3 src/main.py --config=qmix --env-config=pogema with env_args.num_agents=8 env_args.size=10 env_args.density=0 seed=0 
 ```
 
 ```shell
