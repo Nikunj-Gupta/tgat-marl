@@ -11,7 +11,7 @@ env_args:
   map_name: "" 
 
 # --- pymarl options ---
-t_max: 10000000  # Stop running after this many timesteps
+t_max: 5000000  # Stop running after this many timesteps
 
 # --- Logging options ---
 use_tensorboard: True  # Log results to tensorboard
