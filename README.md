@@ -28,8 +28,8 @@ Install Python packages
 
 ```shell
 # require Anaconda 3 or Miniconda 3
-conda create -n pymarl python=3.11 -y
-conda activate pymarl
+conda create -n tgatmarl python=3.11 -y
+conda activate tgatmarl
 
 bash install_dependecies.sh
 ```
