@@ -26,11 +26,6 @@ module load gcc/11.3.0 git/2.36.1
 echo "Starting parallel job script"
 """
 
-threads=5 
-gpu_input=6 
-
-gpus_list = gpu_input.split(",")
-
 DENSITIES = ["0", "0.1", "0.2", "0.3"] 
 SIZES = ["10", "40", "80"] 
 SEEDS = 5 
@@ -43,7 +38,6 @@ count = 0
 for s in range(SEEDS): 
     for sz in SIZES:
         for d in DENSITIES: 
-                gpu = gpus_list[count % len(gpus_list)]
-                cmd = f""" CUDA_VISIBLE_DEVICES={gpu} python3 src/main.py --config=qmix --env-config=pogema with env_args.size={sz} env_args.density={d} seed={s}""" 
+                cmd = f"""python3 src/main.py --config=qmix --env-config=pogema with env_args.size={sz} env_args.density={d} seed={s}""" 
                 count+=1
                 write_run_file(file+cmd, count)
