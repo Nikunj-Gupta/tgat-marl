@@ -18,6 +18,7 @@ file = f"""#!/bin/bash
 #SBATCH --cpus-per-task=64
 #SBATCH --mem=128G
 #SBATCH --time=10:00:00
+#SBATCH --gres=gpu:1  
 
 conda activate dcg
 module load gcc/11.3.0 git/2.36.1
